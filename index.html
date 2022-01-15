@@ -31,7 +31,7 @@
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="ux">
+  <body class="eon">
     <div class="login-background">
       <div class="login-backgroundImg"></div>
       <!-- Nav  -->
@@ -74,7 +74,7 @@
                   Invalid Username or Password!
                 </small>
               </div>
-              <form id="ux-login">
+              <form id="eon-login">
                 <div class="form-group">
                   <input
                     type="email"
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-navy" id="ux-submit">
+                  <button type="submit" class="btn btn-navy" id="eon-submit">
                     Next <i class="fas fa-long-arrow-alt-right"></i>
                   </button>
                 </div>
@@ -138,7 +138,7 @@
           userPassword: "user1234",
         };
 
-        $("#ux-login").submit(function (event) {
+        $("#eon-login").submit(function (event) {
           event.preventDefault();
           const userEmail = $("#userEmail").val();
           const userPassword = $("#userPassword").val();
