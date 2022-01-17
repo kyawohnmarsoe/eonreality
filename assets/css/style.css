@@ -4,15 +4,8 @@
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
-}
-
-.eon .pageWrapper {
-  margin-top: calc(100vh / 6);
 }
 
 .eon h1 {
@@ -39,10 +32,9 @@ body {
 }
 
 .eon .login-background {
-  width: 100%;
-  height: 100%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#1c3763), to(#bb3b56));
   background-image: linear-gradient(to bottom right, #1c3763, #bb3b56);
+  position: relative;
 }
 
 .eon .login-backgroundImg {
@@ -53,6 +45,7 @@ body {
   background-size: cover;
   background-position: top center;
   position: absolute;
+  bottom: 0;
 }
 
 .eon .navbar {

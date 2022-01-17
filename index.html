@@ -33,8 +33,8 @@
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="eon">
-    <div class="login-background">
+  <body class="eon overflow-hidden min-vh-100">
+    <div class="login-background min-vh-100">
       <div class="login-backgroundImg" width="1440" height="821"></div>
       <!-- Nav  -->
       <div class="container">
@@ -64,7 +64,7 @@
       </div>
 
       <!-- Login Form  -->
-      <div class="container pageWrapper">
+      <div class="container" id="pageWrapper">
         <div class="row">
           <div class="col-md-6 offset-md-6 col-sm-6 offset-sm-6">
             <div id="welcomelMsg">
@@ -136,6 +136,17 @@
 
     <script>
       $(document).ready(function () {
+        const windowH = $(window).outerHeight();
+        const navmH = $(".navbar").outerHeight();
+        const formH = $("#loginForm").outerHeight();
+        const marginTop = (windowH - navmH - formH) / 2;
+        console.log(marginTop);
+        if (marginTop > 0) {
+          $("#pageWrapper").css("margin-top", marginTop);
+        } else {
+          $("body").removeClass("overflow-hidden");
+        }
+
         $("#loginFailMsg").hide();
         $("#welcomelMsg").hide();
 
