@@ -1,64 +1,82 @@
 :root {
-  --navy: #1c3763;
-  --redpink: #bb3b56;
-  --blue: #3862af;
-  --darkpurple: #392a40;
-  --purple: #6c324f;
   font-size: 13px;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-.eon h1,
-.eon p {
   color: white;
-  margin: 0;
-  padding: 0;
-}
-.eon p {
   font-family: "Open Sans", sans-serif;
 }
+
 .eon h1 {
   font-family: "Noto Serif", serif;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
+
 .eon a {
   color: white;
 }
+
 .eon a:hover {
   opacity: 0.7;
 }
+
+.eon small {
+  font-size: 90%;
+}
+
 .eon .text-underline {
   text-decoration: underline;
 }
-.eon .navbar {
-  padding-top: 2.5rem;
-}
-.site-logo {
-  width: 100px;
-}
-.login-background {
+
+.eon .login-background {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--navy),
-    var(--redpink)
-  );
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#1c3763), to(#bb3b56));
+  background-image: linear-gradient(to bottom right, #1c3763, #bb3b56);
 }
-.login-backgroundImg {
+
+.eon .login-backgroundImg {
   width: 100%;
   height: 100%;
   background-image: url("../img/user.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  position: absolute;
 }
+
+.eon .navbar {
+  padding-top: 2.5rem;
+}
+
+.eon .navbar .btn {
+  height: 40px;
+  line-height: 2.2rem;
+  color: blank;
+}
+
+.eon .navbar .btn:hover {
+  color: black;
+  opacity: 1;
+}
+
+.eon .navbar .site-logo {
+  width: 100px;
+}
+
 .eon .btn {
   text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  color: white;
 }
 
 .eon .form-control,
@@ -66,91 +84,65 @@ body {
   height: 50px;
   border-radius: 25px;
 }
-.eon .navbar .btn {
-  height: 40px;
-  line-height: 2.2rem;
+
+.eon .btn-navy {
+  width: 100%;
+  background-color: #1c3763;
 }
+
+.eon .btn-navy:hover {
+  -webkit-filter: contrast(150%);
+          filter: contrast(150%);
+}
+
 .eon input[type="email"],
 .eon input[type="password"] {
   background-color: transparent;
   color: white;
-}
-.eon input[type="email"]::placeholder,
-.eon input[type="password"]::placeholder {
-  text-transform: uppercase;
-  color: white;
-}
-.eon input[type="email"],
-.eon input[type="password"],
-.eon .btn {
-  font-size: 13px;
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   word-spacing: 3px;
 }
 
-.eon .btn-navy {
-  width: 100%;
-  background-color: var(--navy);
-  color: white;
-}
-.eon .btn-navy:hover {
-  filter: contrast(150%);
+.eon input[type="email"]::-webkit-input-placeholder,
+.eon input[type="password"]::-webkit-input-placeholder {
+  text-transform: uppercase;
   color: white;
 }
 
-.eon small {
-  font-size: 90%;
+.eon input[type="email"]:-ms-input-placeholder,
+.eon input[type="password"]:-ms-input-placeholder {
+  text-transform: uppercase;
+  color: white;
 }
 
-.login-backgroundImg {
-  position: absolute;
-  animation: myfirst 6s ease 0s infinite alternate;
+.eon input[type="email"]::-ms-input-placeholder,
+.eon input[type="password"]::-ms-input-placeholder {
+  text-transform: uppercase;
+  color: white;
 }
 
-@keyframes myfirst {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-
-  50% {
-    left: 0px;
-    top: 20px;
-  }
-
-  100% {
-    left: 0px;
-    top: 0px;
-  }
+.eon input[type="email"]::placeholder,
+.eon input[type="password"]::placeholder {
+  text-transform: uppercase;
+  color: white;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .login-backgroundImg {
+  .eon .login-backgroundImg {
     background: none;
   }
-  .site-logo {
-    width: 76px;
+  .eon .navbar {
+    padding: 0.5rem 0;
   }
   .eon .navbar .btn {
     height: 32px;
     line-height: 1.5rem;
   }
-  .eon .navbar {
-    padding: 0.5rem 0;
+  .eon .navbar .site-logo {
+    width: 76px;
   }
 }
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-}
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-}
+/*# sourceMappingURL=style.css.map */

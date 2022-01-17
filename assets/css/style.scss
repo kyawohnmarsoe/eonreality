@@ -1,0 +1,130 @@
+$navy: #1c3763;
+$redpink: #bb3b56;
+$blue: #3862af;
+$darkpurple: #392a40;
+$purple: #6c324f;
+
+:root {
+  font-size: 13px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.eon {
+  h1 {
+    font-family: "Noto Serif", serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: white;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  small {
+    font-size: 90%;
+  }
+
+  .text-underline {
+    text-decoration: underline;
+  }
+
+  .login-background {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, $navy, $redpink);
+  }
+
+  .login-backgroundImg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/user.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+  }
+
+  .navbar {
+    padding-top: 2.5rem;
+    .btn {
+      height: 40px;
+      line-height: 2.2rem;
+      color: blank;
+      &:hover {
+        color: black;
+        opacity: 1;
+      }
+    }
+    .site-logo {
+      width: 100px;
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: white;
+  }
+
+  .form-control,
+  .btn {
+    height: 50px;
+    border-radius: 25px;
+  }
+
+  .btn-navy {
+    width: 100%;
+    background-color: $navy;
+    &:hover {
+      filter: contrast(150%);
+    }
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    background-color: transparent;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    &::placeholder {
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .eon {
+    .login-backgroundImg {
+      background: none;
+    }
+    .navbar {
+      padding: 0.5rem 0;
+      .btn {
+        height: 32px;
+        line-height: 1.5rem;
+      }
+      .site-logo {
+        width: 76px;
+      }
+    }
+  }
+}
