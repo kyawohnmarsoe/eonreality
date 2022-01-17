@@ -1,8 +1,13 @@
 $navy: #1c3763;
+$white: #ffffff;
+$black: #000000;
 $redpink: #bb3b56;
 $blue: #3862af;
 $darkpurple: #392a40;
 $purple: #6c324f;
+$openSan: "Open Sans", sans-serif;
+$noto: "Noto Serif", serif;
+$titillium: "Titillium Web", sans-serif;
 
 :root {
   font-size: 13px;
@@ -13,20 +18,23 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  color: white;
-  font-family: "Open Sans", sans-serif;
+  color: $white;
+  font-family: $openSan;
 }
 
 .eon {
+  .pageWrapper {
+    margin-top: calc(100vh / 6);
+  }
   h1 {
-    font-family: "Noto Serif", serif;
+    font-family: $noto;
     font-weight: 700;
     margin: 0;
     padding: 0;
   }
 
   a {
-    color: white;
+    color: $white;
     &:hover {
       opacity: 0.7;
     }
@@ -59,53 +67,54 @@ body {
   .navbar {
     padding-top: 2.5rem;
     .btn {
-      height: 40px;
-      line-height: 2.2rem;
-      color: blank;
+      height: 3rem;
+      line-height: 2rem;
       &:hover {
-        color: black;
+        color: $black;
         opacity: 1;
       }
     }
     .site-logo {
       width: 100px;
+      height: auto;
     }
   }
 
   .btn {
     text-transform: uppercase;
-    font-family: "Titillium Web", sans-serif;
+    font-family: $titillium;
     font-weight: 600;
     letter-spacing: 1px;
     word-spacing: 3px;
-    color: white;
+    color: $white;
   }
 
   .form-control,
   .btn {
-    height: 50px;
-    border-radius: 25px;
+    height: 4rem;
+    border-radius: 2rem;
   }
 
   .btn-navy {
     width: 100%;
     background-color: $navy;
     &:hover {
-      filter: contrast(150%);
+      // filter: contrast(150%);
+      background-color: $blue;
     }
   }
 
   input[type="email"],
   input[type="password"] {
     background-color: transparent;
-    color: white;
-    font-family: "Titillium Web", sans-serif;
+    color: $white;
+    font-family: $titillium;
     font-weight: 600;
     letter-spacing: 1px;
     word-spacing: 3px;
     &::placeholder {
       text-transform: uppercase;
-      color: white;
+      color: $white;
     }
   }
 }
@@ -119,11 +128,12 @@ body {
     .navbar {
       padding: 0.5rem 0;
       .btn {
-        height: 32px;
-        line-height: 1.5rem;
+        height: 3rem;
+        line-height: 2rem;
       }
       .site-logo {
         width: 76px;
+        height: auto;
       }
     }
   }
